@@ -1,6 +1,6 @@
 # apt
 
-## config
+## 22.04LTS config
 - [清华源](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
   ```bash
   # 备份系统配置文件
