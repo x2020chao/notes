@@ -10,13 +10,8 @@
 
 ## multipass 安装
 ```ps
-# 查看可用镜像
-PS > multipass find
-Image                       Aliases           Version          Description
-minikube                                      latest           minikube is local Kubernetes
-
 # 安装实例
-PS > multipass launch -c 2 -d 40G -m 4G --network WLAN --timeout 600 -n mpvm-minikube minikube
+PS > multipass launch -c 2 -d 40G -m 4G --network WLAN --timeout 600 -n mpvm-minikube 22.04
 
 # 打开 shell
 PS > multipass shell mpvm-minikube
@@ -31,6 +26,10 @@ $ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 - [设置兼容的容器或虚拟机管理器](https://minikube.sigs.k8s.io/docs/drivers/)
   - [docker 安装](/docker/install.md)
+  - 添加用户组 
+    ```
+    sudo usermod -aG docker $USER && newgrp docker
+    ```
 
 
 ```bash
