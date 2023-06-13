@@ -36,7 +36,7 @@ $ sudo install minikube-linux-amd64 /usr/local/bin/minikube
     sudo usermod -aG docker $USER && newgrp docker
     ```
 
-
+### 启动集群
 ```bash
 # 启动集群
 $ minikube start
