@@ -18,6 +18,7 @@ PS > multipass shell mpvm-minikube
 ```
 
 ## ubuntu
+### [安装 minikube](https://minikube.sigs.k8s.io/docs/start/)
 ```bash
 # 安装 minikube
 $ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
@@ -26,6 +27,10 @@ $ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 - [设置兼容的容器或虚拟机管理器](https://minikube.sigs.k8s.io/docs/drivers/)
   - [docker 安装](/docker/install.md)
+  - 配置 docker 为默认驱动程序
+    ```
+    minikube config set driver docker
+    ```
   - 添加用户组 
     ```
     sudo usermod -aG docker $USER && newgrp docker
@@ -34,5 +39,5 @@ $ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 ```bash
 # 启动集群
-$ minikube start --driver=docker
+$ minikube start
 ```
