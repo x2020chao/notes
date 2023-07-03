@@ -56,6 +56,7 @@ const handler = {
 const arr = new Proxy([], handler);
 arr.push(1)
 arr[0] = 2
+arr.shift()
 
 const ob = new Proxy({}, handler)
 ob.id = 1;
